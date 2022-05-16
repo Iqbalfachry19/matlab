@@ -1,0 +1,11 @@
+I = imread('circuit.tif');
+[brs kol] = size(I);
+x1 = 50;
+x2 = 200;
+y1 = 50;
+y2 = 200;
+I(1:x1,:) = 0;
+I(x2:brs,:) = 0;
+I(:,1:y1) = 0;
+I(:,y2:kol) = 0;
+imshow(I);
